@@ -1,0 +1,38 @@
+div{
+    background-color: red;
+    height: 200px;
+}
+div:hover{
+    animation-name: kchbhi;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+
+}
+@keyframes kchbhi {
+    0%{
+        background-color: crimson;
+        width: 400px;
+
+    }
+    25%{
+        background-color: tomato;
+        width: 100vw;
+
+    }
+    50%{
+        background-color: blueviolet;
+        width: 500px;
+        border-radius:50%;
+    }
+    75%{
+        background-color: chocolate;
+        width: 200px;
+    }
+    100%{
+        background-color: lightpink;
+        width: 100px;
+    }
+    
+}
