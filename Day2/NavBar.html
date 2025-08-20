@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: flex;
+            height: 30px;
+            background-color: darkorange;
+            justify-content: space-around;
+            align-items: center;
+        }
+        p{
+            color: aliceblue;
+        }
+        #nav_msg{
+            display: flex;
+            justify-content: space-around;
+            width: 200vw;
+        }
+        @media screen and (max-width:360px){
+            nav{
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+            }
+            #nav_msg{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div>
+            <p>Coding ninja</p>
+        </div>
+        <div id="nav_msg">
+            <p>Home</p>
+            <p>About us</p>
+            <p>Search</p>
+            <p>More</p>
+        </div>
+        <button>click</button>
+    </nav>
+    
+</body>
+</html>
+
