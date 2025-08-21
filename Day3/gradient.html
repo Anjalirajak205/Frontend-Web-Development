@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            background: linear-gradient( to right,rgb(188, 146, 112) 20%,rgb(187, 191, 183) 40%,rgb(165, 134, 134) 50%);
+        }
+        div{
+            height: 200px;
+            width: 200px
+        }
+        .repeat{
+            background: repeating-linear-gradient(
+                45deg,
+                rgb(234, 165, 165) 0px,
+                rgb(220, 87, 87) 5px,
+                rgb(236, 111, 111) 5px,
+                rgb(206, 8, 8) 10px
+                );
+        }
+        .radial{
+            background: radial-gradient(rgb(201, 231, 201), rgb(141, 222, 141), rgb(64, 152, 64));
+        }
+        .radial-ellipse{
+            background: radial-gradient(ellipse at center ,pink,rgb(142, 96, 142),purple);
+        }
+        .repeating-radial{
+             background: repeating-radial-gradient(
+                
+                rgb(234, 165, 165) 0px,
+                rgb(220, 87, 87) 5px,
+                rgb(206, 54, 54) 5px,
+                rgb(206, 8, 8) 10px
+                );
+
+        }
+        .conic{
+            background: conic-gradient(red,orange,yellow,blue,green,indigo,violet);
+        }
+        #a{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            gap: 2px;
+            flex-wrap: wrap;
+        }
+        .conic-repeat{
+            background: repeating-conic-gradient(
+              pink 0deg 20deg ,
+              purple 20deg 40deg
+           );
+        }  
+        .conic2{
+            background: conic-gradient(pink,rgb(225, 143, 156),rgb(181, 101, 115),rgb(201, 94, 112),rgb(176, 70, 88));
+        } 
+
+        
+    </style>
+    
+</head>
+<body>
+    <div id = "a">
+    <div id = "box"></div>
+    <div class = "repeat"></div>
+    <div class = "radial"></div>
+    <div class = "radial-ellipse"></div>
+    <div class = "repeating-radial"></div>
+    <div class = "conic"></div>
+    <div class = "conic-repeat"></div>
+    <div class = "conic2"></div>
+    </div>
+</body>
+</html>
