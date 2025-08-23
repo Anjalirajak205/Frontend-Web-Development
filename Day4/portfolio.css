@@ -18,44 +18,133 @@ body{
     
     
 }
+.name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 0px 30px;
+    width: 150px;
+}
 
 #name{
     color: rgb(193, 193, 233);
 }
 
 #theme{
+    border-radius: 15px;
+    border: 4px solid rgb(73, 26, 73);
+    height: fit-content;
+    width: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sm{
+    height: 30px;
+    width: 30px;
+}
+
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    color: whitesmoke;
+    width: 700px;
+}
+
+#conBtn{
+    background-color: rgb(34, 1, 42);
+    border-radius: 30px;
+    color: white;
+    margin-right: 40px;
+    height: 40px;
+    width: 90px;
+}
+
+#hi{
+    font-size: 40px;
+    text-align: center;
+}
+
+#body{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+    padding: 50px 50px 50px 50px;
+}
+
+#img{
+    border-radius: 100%;
+    background-color: rgb(122, 29, 122);
+    height: 400px;
+    width: 400px;
+}
+
+#intro{
+    height: 200px;
+    width: 500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+p{
+    text-align:left;
+    font-size: 20px;
+}
+
+.icons{
+    height: 30px;
+    width: 30px;
+    
+    background-color:rgb(121, 70, 121);
+}
+
+#links{
+    align-self: flex-end;
+    display: flex;
+    position: absolute;
+    top: 150px;
+    padding: 40px,40px,40px,40px;
+}
+
+#right{
+    height: 150px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#as{
+    font-size: 40px;
+    text-align: center;
+}
+
+#asContent{
+    font-size: 20px;
+}
+
+#cv{
+    background-color: rgb(164, 107, 164);
     border-radius: 16px;
-    border: 10px solid white;
-    height: 10px;
-    width:fit-content;
+    width: 100px;
+    height:40px;
+    position: absolute;
+    top: 300px;
+    right: 300px;
 }
 
-.features {
-  display: flex;
-  gap: 30px;         /* space between items */
-  color: white;
-  font-weight: bold;
-}
-#hero {
-  padding: 80px 20px;
-  text-align:left;
-  color: rgb(149, 71, 149)
-}
-#hero h1 {
-  font-size: 3rem;
-}
-.btn {
-  padding: 0px;
-  background-color: #55838f; /* accent color */
-  color: white;
-  border: none;
-  border-radius: 1px;
-  
-  text-decoration: none;
+button:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
 }
 
+#left{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
 
-
-
-    
-    
