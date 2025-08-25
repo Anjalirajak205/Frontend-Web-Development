@@ -257,10 +257,10 @@ ul a{
 }
 
 .logo{
-       background-image: url("amazon_logo.png");
-   height: 50px;
-   width: 100px;
-   background-size: cover;
+    background-image: url("amazon_logo.png");
+    height: 50px;
+    width: 100px;
+    background-size: cover;
 }
 
 .footPanel4{
@@ -273,8 +273,7 @@ ul a{
 }
 
 .pages{
-    
-     padding-top: 25px;
+    padding-top: 25px;
 }
 
 .Copyright{
