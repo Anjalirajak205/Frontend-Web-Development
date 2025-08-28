@@ -73,7 +73,7 @@
   console.log(data)*/
 
 //objects
-// kisi object ke under function ko call kerte h toh woh function object bn jata hai
+//If we write a function in an object then it is called method...
 
    /*let obj={
      id:1,
