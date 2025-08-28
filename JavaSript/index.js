@@ -39,8 +39,62 @@
 // else{
 //     console.log("hii");
 // }
-let a=false
-a?console.log("hii"):console.log("byee");
-console.log(1+1);
-console.log('1'+2)
-console.log('1'-2)
+// let a=false
+// a?console.log("hii"):console.log("byee");
+// console.log(1+1);
+// console.log('1'+2)
+// console.log('1'-2)
+
+// 28 august
+
+// let arr=[1,2,3,4,5];
+//         let sum = arr.reduce((a,b,c,d)=>{
+//              return a+b;
+//         },10)
+//         console.log(sum);
+
+
+//filter functions accept the conditional statements.
+
+    /*let arr=[1,2,3,4,5,64,3,5,2,5,2,34];
+
+   let data = arr.filter((a,b,c,d)=>{
+     return a>2
+   })
+   console.log(data)*/
+
+//sorting the elementss.By using sort functions.
+
+  /*let arr=[1,2,3,4,5,64,3,5,2,5,2,34];
+  let data = arr.sort((a,b,c,d)=>{
+     return a-b;
+  })
+
+  console.log(data)*/
+
+//objects
+// kisi object ke under function ko call kerte h toh woh function object bn jata hai
+
+   /*let obj={
+     id:1,
+     name:"Anjali",
+     sum:function(){
+          console.log("hello")
+     }
+  }
+  obj.sum()
+  //console.log(obj.id)*/
+
+    /*function sum(a){
+      console.log(a)
+    }
+    let obj1={
+     id:1
+    }
+    sum(obj1)*/
+
+
+//a=5
+console.log(a);
+var a=5
+ 
