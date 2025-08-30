@@ -78,9 +78,14 @@ body{
 
 #img{
     border-radius: 100%;
+    background-image: url(img6.jpg);
+    background-size: cover;
+    background-position: center;
     background-color: rgb(131, 39, 131);
     height: 400px;
     width: 400px;
+    border: 5px solid purple;  
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); 
 }
 
 #introduction{
