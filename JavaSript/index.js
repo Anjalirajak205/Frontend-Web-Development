@@ -95,6 +95,98 @@
 
 
 //a=5
-console.log(a);
-var a=5
+/*console.log(a);
+var a=5*/
  
+
+// hoisting
+
+/*var a=5
+var a=()=>{
+    console.log("hii")
+}
+a()*/
+
+//pure functionn
+
+  /*function sum(){
+  console.log("hii");
+  }
+  sum()*/
+
+//impure function
+
+   /*let a=5
+   function sum(){
+   a+=5;
+   return a
+  }
+  console.log(sum());
+  console.log(sum());*/
+
+//{
+  //let a=10  
+  /*var a=10  //var ko kabhi bhi khi se bhi declare kr skte haii isse hum block ke bhar bhi acess kr skte hai . It is functional scope
+//  console.log(a);
+}
+console.log(a);*/ // variable is not declared 
+  
+
+/*let a=10   // let ko block ke bhar access nhi kr skte hai .It is block scope
+{
+  let a=30
+}
+console.log(a)*/
+
+/*function sum(){
+  var a=5
+}
+console.log(a);*/
+
+
+// Array
+
+/*let arr =[1,3,4,6,78,89]
+arr.push(11) // add the element at last
+arr.pop      // removes the element from last
+arr.unshift(101) // adds the element in the first position 
+arr.shift()  // removes the element from first position 
+console.log(arr);*/
+
+//HOF - Higher order function 
+// a function that only returns a function. koi bhi function jo apne argument m koi function contain kare
+
+/*function outer(){
+  function inner(){
+    console.log("inner");
+  
+  }
+  return inner
+}
+let a=outer()
+a()*/
+
+/*function outer(a){
+  a()
+
+}
+function inner(){
+  console.log("hii")
+}
+
+outer (inner)*/
+
+console.log(typeof(true));
+console.log(typeof(typeof(true)));
+console.log((typeof(5)));
+
+let arr=[2,"hello",true]
+for (let i=0;i<arr.length;i++){
+  console.log(arr[i],typeof(arr[i]))
+}
+
+
+
+
+
+
