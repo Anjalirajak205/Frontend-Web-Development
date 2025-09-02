@@ -176,14 +176,94 @@ function inner(){
 
 outer (inner)*/
 
-console.log(typeof(true));
-console.log(typeof(typeof(true)));
-console.log((typeof(5)));
+// console.log(typeof(true));
+// console.log(typeof(typeof(true)));
+// console.log((typeof(5)));
 
-let arr=[2,"hello",true]
-for (let i=0;i<arr.length;i++){
-  console.log(arr[i],typeof(arr[i]))
-}
+// let arr=[2,"hello",true]
+// for (let i=0;i<arr.length;i++){
+//   console.log(arr[i],typeof(arr[i]))
+// }
+
+let arr=[1,2,"hello","hii",true,false]
+
+/*function getString(arr){
+  let res=[]
+  for(let i of arr){
+    if(typeof i == "string")
+        res.push (i)
+    }
+    return res
+  }
+  console.log(getString(arr))
+
+  function getnumber(arr){
+  let res=[]
+  for(let i of arr){
+    if(typeof i == "number")
+        res.push (i)
+    }
+    return res
+  }
+  console.log(getnumber(arr))*/
+
+  /*function getString(i){
+    return typeof i == "string"
+  }
+
+  function getnumber(i){
+    return typeof i == "number"
+  }
+
+  function getBoolean(i){
+    return typeof i == "boolean"
+  }
+
+  function getfunction(arr,fun){
+
+    let res=[]
+    for(let i of arr){
+      if(fun(i)){
+        res.push(i)
+      }
+    }
+    return res
+  }
+  console.log(getfunction(arr,getString))
+  console.log(getfunction(arr,getnumber))
+  console.log(getfunction(arr,getBoolean))*/
+
+// closure = jab bhi koi function kisi function ke ander return kerta hai toh 
+     // voh apne sath ek copy carry karta hai parent function ki ,toh us function ke ander 
+     //value ho ya na ho woh perfectly work krega 
+
+  /*function outer(){
+    let user="Anjali"
+    function inner(){
+      console.log(user)
+    }
+    return inner
+  }
+  let a=outer()
+  a()*/
+
+
+  /*setTimeout(()=>{
+    console.log("hello");
+  },300)
+
+  setInterval(()=>{
+    console.log("hiii");
+  },300)*/
+
+
+  for (let i=1;i<5;i++){
+       setTimeout(()=>{
+        console.log(i);
+       },1000*i)
+  }
+
+
 
 
 
