@@ -185,7 +185,7 @@ outer (inner)*/
 //   console.log(arr[i],typeof(arr[i]))
 // }
 
-let arr=[1,2,"hello","hii",true,false]
+//let arr=[1,2,"hello","hii",true,false]
 
 /*function getString(arr){
   let res=[]
@@ -257,12 +257,72 @@ let arr=[1,2,"hello","hii",true,false]
   },300)*/
 
 
-  for (let i=1;i<5;i++){
+  /*for (let i=1;i<5;i++){
        setTimeout(()=>{
         console.log(i);
        },1000*i)
-  }
+  }*/
 
+       //window = It is a global object for js
+
+
+  /*a=5
+  console.log(this.a)  
+  console.log(window)*/
+
+ /* let obj={
+    id:1,
+    name:"hello",
+    sum:function(){
+      console.log(this)
+    }
+  }   
+  obj.sum()*/
+
+// this keyword: arrow function ke ander this keyword kaam nhi kerta hai woh as a global keyword treat hoga or block ke bhar ki value print krega (a=5)
+
+/*a=5
+let obj={
+  //id:1,
+  a:10,
+  //name:"hello",
+  sum:()=>{
+       console.log(this.a);
+  },
+  id:1,
+  name:"hello",
+}
+obj.sum()*/
+
+// prototype concept: ek layer dikhti hai or ek layer nhi dikhtii.. It is a hiddenn data type which the hidden proprties of different data used in program.
+
+/*let obj={
+  id :1,
+  name:"anjali"
+}*/
+//console.log(obj.toString());
+
+
+/*let arr=[1,23,345]
+console.log(Array.prototype);
+console.log(arr.toString());*/
+
+let arr=[1,12,123,1234]
+/*arr.myMap((a,b,c)=>{
+  console.log(a)
+})*/
+Array.prototype.myMap=function(callback){
+  let res=[]
+  for(let i=0;i<this.length;i++){
+    res.push(callback(this[i],i,this))
+  }
+  return res
+}
+
+ let data = arr.myMap((a,b,c)=>{
+  return c
+ })
+console.log(data)
 
 
 
