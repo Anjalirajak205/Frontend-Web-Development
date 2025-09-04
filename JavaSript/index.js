@@ -307,11 +307,11 @@ obj.sum()*/
 console.log(Array.prototype);
 console.log(arr.toString());*/
 
-let arr=[1,12,123,1234]
+//let arr=[1,12,123,1234]
 /*arr.myMap((a,b,c)=>{
   console.log(a)
 })*/
-Array.prototype.myMap=function(callback){
+/*Array.prototype.myMap=function(callback){
   let res=[]
   for(let i=0;i<this.length;i++){
     res.push(callback(this[i],i,this))
@@ -322,11 +322,119 @@ Array.prototype.myMap=function(callback){
  let data = arr.myMap((a,b,c)=>{
   return c
  })
-console.log(data)
+console.log(data)*/
+
+//Filter Functionss
+
+//let arr=[1,2,3,5,6,7]
+// let res=arr.filter((a,b,c)=>{
+//   return a>2
+// })
+// console.log(res)
+/*let arr=[1,2,3,5,6,7]
+Array.prototype.myFilter=function(cb){
+  let res=[]
+  for(let i=0;i<this.length;i++){
+    if(cb(this[i],i,this)){
+      res.push(this[i])
+    }
+  }
+  return res
+}
+
+let data=arr.myFilter((a,b,c)=>{
+  return a%2==1
+})
+console.log(data);*/
 
 
+// Asysnchronous Programming 
 
+// insta   problemm
 
+/*function step1(){
+  setTimeout(()=>{
+    console.log("photo");
+  },5000)
+}
+
+function step2(){
+  setTimeout(()=>{
+    console.log("filter");
+  },4000)
+}
+
+function step3(){
+  setTimeout(()=>{
+    console.log("caption");
+  },3000)
+}
+
+function step4(){
+  setTimeout(()=>{
+    console.log("post");
+  },2000)
+}
+
+step1()
+step2()
+step3()
+step4()*/
+
+//solution /  call back function 
+
+/*function minus(){
+  console.log("hiii");
+}
+
+function sum(fn){
+  console.log("hello");
+  fn()
+}
+
+sum(()=>{
+  minus()
+})*/
+
+// call back hell
+
+function step1(fn){
+  setTimeout(()=>{
+    console.log("photo");
+    fn()
+  },5000)
+}
+
+function step2(fn){
+  setTimeout(()=>{
+    console.log("filter");
+    fn()
+  },4000)
+}
+
+function step3(fn){
+  setTimeout(()=>{
+    console.log("caption");
+    fn()
+  },3000)
+}
+
+function step4(fn){
+  setTimeout(()=>{
+    console.log("post");
+    fn()
+  },2000)
+}
+
+step1(()=>{
+  step2(()=>{
+    step3(()=>{
+       step4(()=>{
+        
+       })
+    })
+  })
+})
 
 
 
