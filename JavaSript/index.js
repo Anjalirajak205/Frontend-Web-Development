@@ -398,7 +398,7 @@ sum(()=>{
 
 // call back hell
 
-function step1(fn){
+/*function step1(fn){
   setTimeout(()=>{
     console.log("photo");
     fn()
@@ -434,7 +434,21 @@ step1(()=>{
        })
     })
   })
-})
+})*/
+
+
+console.log('start');
+
+setTimeout(function(){
+  console.log('run after 2 seconds');
+},2000);
+
+setTimeout(function(){
+  console.log('run after 4 seconds');
+
+},4000);
+
+console.log('end')
 
 
 
