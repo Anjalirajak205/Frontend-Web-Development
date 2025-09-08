@@ -437,7 +437,7 @@ step1(()=>{
 })*/
 
 
-console.log('start');
+/*console.log('start');
 
 setTimeout(function(){
   console.log('run after 2 seconds');
@@ -448,9 +448,86 @@ setTimeout(function(){
 
 },4000);
 
-console.log('end')
+console.log('end')*/
+
+// promises are used for creating asynchronous  tasks in future in js.And thus then promise canbe resolved and rejected.
+
+//let promise=  new Promise((res,rej)=>{
+    //rej()
+    //res()
+
+    /*let a=true
+    if(a){
+      res()
+    }
+    else{
+      rej()
+    }*/
+
+//})
+
+//.then function can be used when promise is resolved.
+/*promise.then(()=>{
+  console.log("done")
+
+//.catch function can be used when promise is rejected.
+}).catch(()=>{
+  console.log("error")
+})*/
+
+//console.log(promise,"hehehe");
+
+/*let step1 = function(){
+    return new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res()
+        console.log("photo selected")
+      },4000)
+    })
+}
+
+let step2 = function(){
+    return new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res()
+        console.log("captionss")
+      },2000)
+    })
+}
+
+step1().then(()=>{
+    return step2().then(()=>{
+
+    })
+})*/
+    
+//Asysnc await 
+
+let step1 = function(){
+    return new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res()
+        console.log("photo selected")
+      },3000)
+    })
+}
+
+let step2 = function(){
+    return new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res()
+        console.log("captionss")
+      },2000)
+    })
+}
 
 
+async function call(){
+   await step1()
+    step2()
+  
+}
+call()
 
 
 
