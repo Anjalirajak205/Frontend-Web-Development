@@ -503,7 +503,7 @@ step1().then(()=>{
     
 //Asysnc await 
 
-let step1 = function(){
+/*let step1 = function(){
     return new Promise((res,rej)=>{
       setTimeout(()=>{
         res()
@@ -527,7 +527,9 @@ async function call(){
     step2()
   
 }
-call()
+call()*/
+
+
 
 
 
