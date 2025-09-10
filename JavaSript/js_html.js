@@ -35,12 +35,75 @@ setInterval(function(){
     num=(num+1)% arr.length
 },2000)*/
 
+// applying event methods
 
-let body=document.querySelector("body")
+// first method:
+/*let body=document.querySelector("body")
 function fun1(){
     console.log("hello")
     body.style.backgroundColor="yellow"
-}
+}*/
+
+// second method:
+/*let btn= document.querySelector("button")
+let body= document.querySelector("body")
+btn.onclick=function(){
+    console.log("hello");
+    body.style.backgroundColor="red"
+
+}*/
+
+// third method:
+/*let btn= document.querySelector("button")
+let body= document.querySelector("body")
+
+btn.addEventListener("click",function(){
+    body.style.backgroundColor="red"
+})*/
+
+// Event on change
+
+/*let inp= document.querySelector("input")
+let h2= document.querySelector("h2")
+inp.addEventListener("input",(e)=>{
+    //console.log("hello")
+    //console.log(e.target.value)   // e is a parameter
+
+    h2.innerText=e.target.value
+})*/
+
+//let formEl= document.querySelector("form")
+/*formEl.addEventListener("submit",(e)=>{
+      e.preventDefault()
+    
+        // console.log(formEl[0].value)
+        // console.log(formEl[1].value)
+        // console.log(formEl[2].value)
+
+        let data={
+            name:formEl[0],
+            email:formEl[1],
+            pass:formEl[2]
+        }
+        console.log(data);
+        localStorage.setItem("formData",JSON.stringify(data))
+        //localStorage.removeItem("formData",JSON.stringify(data))
+    })*/
+
+   // let formEl= document.querySelector("form")
+/*formEl.addEventListener("submit",(e)=>{
+      e.preventDefault()
+          let data={
+            name:formEl[0],
+            email:formEl[1],
+            pass:formEl[2]
+        }
+        console.log(data);
+        //localStorage.setItem("formData",JSON.stringify(data))
+        localStorage.removeItem("formData",JSON.stringify(data))
+    })*/
+
+
 
 
 
