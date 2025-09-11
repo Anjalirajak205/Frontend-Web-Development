@@ -72,8 +72,8 @@ inp.addEventListener("input",(e)=>{
     h2.innerText=e.target.value
 })*/
 
-//let formEl= document.querySelector("form")
-/*formEl.addEventListener("submit",(e)=>{
+let formEl= document.querySelector("form")
+formEl.addEventListener("submit",(e)=>{
       e.preventDefault()
     
         // console.log(formEl[0].value)
@@ -81,14 +81,14 @@ inp.addEventListener("input",(e)=>{
         // console.log(formEl[2].value)
 
         let data={
-            name:formEl[0],
-            email:formEl[1],
-            pass:formEl[2]
+            name:formEl[0].value,
+            email:formEl[1].value,
+            pass:formEl[2].value
         }
         console.log(data);
         localStorage.setItem("formData",JSON.stringify(data))
         //localStorage.removeItem("formData",JSON.stringify(data))
-    })*/
+    })
 
    // let formEl= document.querySelector("form")
 /*formEl.addEventListener("submit",(e)=>{
@@ -102,6 +102,29 @@ inp.addEventListener("input",(e)=>{
         //localStorage.setItem("formData",JSON.stringify(data))
         localStorage.removeItem("formData",JSON.stringify(data))
     })*/
+
+   let form2= document.querySelector("#form2")
+   form2.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    let saveData=localStorage.getItem("formData")
+    let dataObj= JSON.parse(saveData)
+
+    let loginObj ={
+        email:form2[0].value,
+        pass:form2[1].value
+
+    }
+    
+    if(dataObj.email==loginObj.email && dataObj.pass==loginObj.pass){
+        prompt("Login donee")
+    }
+    else{
+        prompt("error")
+    }
+    
+})
+
+    
 
 
 
