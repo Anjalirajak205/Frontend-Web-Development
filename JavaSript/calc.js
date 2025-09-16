@@ -1,22 +1,22 @@
-let inp= document.querySelector("input")
-let button= document.querySelectorAll("button")
+let input= document.querySelector("input")
+let button= document.querySelectorAll('button')
 //console.log(button)
 
 for(let btn of button){
     btn.addEventListener("click",()=>{
         //console.log(hegehe)
-        let text =btn.innerText
+        let txt = btn.innerText
 
-        if(text=="C"){
-           inp.value=""
+        if(txt=='C'){
+           input.value=""
         }
-        else if(text==="="){
+        else if(txt =='='){
             
-            inp.value = eval(inp.value);
+            input.value = eval(input.value);
           
     }
         else{
-            inp.value=inp.value+text
+            input.value = input.value+txt
         }
         
     })
