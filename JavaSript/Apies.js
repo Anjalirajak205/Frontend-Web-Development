@@ -5,6 +5,7 @@
 })*/
 
 //Destructurering
+
 /*let obj={
     id:1,
     name:"anjali",
@@ -13,6 +14,7 @@
 }
 let (id)=obj
 console.log(id);*/
+
 
 let ul = document.querySelector("ul")
 fetch("https://jsonplaceholder.typicode.com/todos").
