@@ -12,7 +12,7 @@ let canvas=document.querySelector('canvas')
     let id=setInterval(()=>{
       draw()
       update()
-    },100)
+    },200)
 
        document.addEventListener("keydown",(e)=>{
         // console.log("helllo");
@@ -37,7 +37,7 @@ let canvas=document.querySelector('canvas')
         return 
       }
 
-      pen.clearRect(0,0,600,400)
+      pen.clearRect(0,0,1400,600)
         for(let i of snakeCells){
         
               pen.fillStyle="yellow"
@@ -61,7 +61,7 @@ let canvas=document.querySelector('canvas')
             if(direction=='right'){
               newX=headX+cell
               newY=headY
-              if(newX==600){
+              if(newX==1400){
                 gameOver=true
               }
             }
@@ -83,7 +83,7 @@ let canvas=document.querySelector('canvas')
             else{
               newX=headX
               newY=headY+cell
-              if(newY==400){
+              if(newY==600){
                 gameOver=true
               }
             }
@@ -103,8 +103,8 @@ let canvas=document.querySelector('canvas')
 
   function generateRandomCell() {
   return [
-    Math.round((Math.random()*(550))/cell)*cell,
-    Math.round((Math.random()*(250))/cell)*cell
+    Math.round((Math.random()*(1350))/cell)*cell,
+    Math.round((Math.random()*(650))/cell)*cell
   ]
 }
 console.log(generateRandomCell());
