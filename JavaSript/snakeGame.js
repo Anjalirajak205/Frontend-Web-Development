@@ -1,5 +1,5 @@
 let canvas=document.querySelector('canvas')
-    let pen=canvas.getContext("2d")
+let pen=canvas.getContext("2d")
  
     let snakeCells=[[0,0]]
     let cell=50
@@ -33,20 +33,20 @@ let canvas=document.querySelector('canvas')
         clearInterval(id)
      
       pen.font = '40px sans-serif';
-           pen.fillText('Game over', 50, 150);
+      pen.fillText('Game over', 50, 150);
         return 
       }
 
       pen.clearRect(0,0,1400,600)
         for(let i of snakeCells){
         
-              pen.fillStyle="yellow"
+            pen.fillStyle="yellow"
             pen.fillRect(i[0],i[1],cell,cell)
         }
 
         pen.font = '40px sans-serif';
         pen.fillText(`${score}`,150,50);
-               pen.fillStyle="white"
+        pen.fillStyle="white"
         pen.fillRect(random[0],random[1],cell,cell)
     }
 

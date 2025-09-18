@@ -16,7 +16,7 @@ let (id)=obj
 console.log(id);*/
 
 
-let ul = document.querySelector("ul")
+/*let ul = document.querySelector("ul")
 fetch("https://jsonplaceholder.typicode.com/todos").
 then((data)=>{
     return data.json()
@@ -36,7 +36,27 @@ function show(res){
      ul.append(li,h4)
     }
 
+}*/
+
+let btn=document.querySelector("button")
+let inp=document.querySelector("input")
+btn.addEventListener("click",()=>{
+    let searchText=inp.value
+
+fetch(`https://api.tvmaze.com/search/shows?q=${searchText}`).
+then((data)=>{
+    return data.json()
+
+}).then((res)=>{
+    console.log(res);
+    show(res)
+})
+})
+
+function show(res){
+    let img = document.querySelector("img")
+        let link = res[0].show.image.medium
+        img.setAttribute("src",link)
+    
 }
-
-
 
