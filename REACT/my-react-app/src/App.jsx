@@ -47,7 +47,7 @@
 //  </div>
 //  }   
 
-const App = ()=>{
+/*const App = ()=>{
   let count=0
 
   function fun1(){
@@ -64,5 +64,33 @@ const App = ()=>{
 
   )
 }
+export default App */
 
-  
+// 23 september
+ 
+import React, {useState} from "react"
+import Home from './Home'
+const App = () =>{
+  console.log("hii");
+  let [state,SetState]= useState("red")
+  function fun1(){
+    //SetState(state+1)
+      //SetState("green")
+      if(state=='red'){
+        SetState("gold")
+      }else{
+        SetState("red")
+      }
+  }
+   return (
+    <div style={{backgroundColor:state}}>
+       <h2>{state}</h2>
+       <button onClick={fun1}>click</button>
+       <Home/>
+       </div>
+
+  )
+
+} //rafce
+export default App
+
