@@ -23,9 +23,9 @@
 
 // 24 september
 
-import React ,{useEffect, useState} from 'react'
+/*import React ,{useEffect, useState} from 'react'
 import './App.css'
-const Home = ()=>{
+const Home = ()=>{*/
 
 
  /* let [count,SetCount]=useState(0)
@@ -39,7 +39,7 @@ const Home = ()=>{
     return res.json()
   })*/
 
-  let [ApiData,SetApiData]=useState([])
+  /*let [ApiData,SetApiData]=useState([])
   useEffect(()=>{
     fetch("https://jsonplaceholder.typicode.com/todos")
     .then((res)=>{
@@ -50,14 +50,14 @@ const Home = ()=>{
       SetApiData(data)
     })
   },[])
-  return (
+  return (*/
     // <div>
     //   <h3>{count}</h3>
     //   <button onClick={()=>SetCount(count+1)}>Click</button>
     //   <h3>{city}</h3>
     //   <button onClick={()=>{SetCity("bhopal")}}>Change</button>
     // </div>
-    <div>
+   /* <div>
       {
         ApiData.map((a)=>{
           return(<>
@@ -67,6 +67,45 @@ const Home = ()=>{
         })
       }
     </div>
+  )
+}
+export default Home*/
+
+// 25 september
+
+import React ,{useEffect, useState} from 'react'
+import './App.css'
+const Home = ()=>{
+  let [apiData,SetData]=useState([])
+  useEffect(()=>{
+    fetch("https://dummyjson.com/recipes").then((res)=>{
+      return res.json()
+
+    }).then((data)=>{
+      console.log(data.recipes);
+      SetData(data.recipes)
+    })
+  },[])
+  function deletee(id){
+   let newArr= apiData.filter((a,b)=>{
+      return b!==id
+    })
+    SetData(newArr)
+  }
+  return (
+      <div>
+        {
+          apiData.map((a,index)=>{
+            return(<>
+            <div id='card'>
+              <img src={a.image}/>
+              <p>{a.name}</p>
+              <button onClick={()=>deletee(index)}>delete</button>
+              </div>
+              </>)
+          })
+        }
+      </div>
   )
 }
 export default Home
