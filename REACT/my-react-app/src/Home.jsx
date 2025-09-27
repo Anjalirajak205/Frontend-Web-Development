@@ -75,9 +75,11 @@ export default Home*/
 
 import React, { useEffect, useState } from 'react'
 import './App.css'
+
 const Home = () => {
-  let [apiData, SetData] = useState([])
-  let[filterData,setFilterData]=useState([])
+  
+      let[apiData, SetData] = useState([])
+      let[filterData,setFilterData]=useState([])
 
   useEffect(() => {
     fetch("https://dummyjson.com/recipes").then((res) => {
@@ -89,16 +91,17 @@ const Home = () => {
       setFilterData(data.recipes)
     })
   }, [])
-  function deletee(id) {
 
-    let newArr = apiData.filter((a, b) => {
+
+  function deletee(id) {
+      let newArr = apiData.filter((a, b) => {
       return b !== id
     })
     SetData(newArr)
   }
 
   function fun1() {
-    let Data1 = [...apiData].sort((a, b) => {
+      let Data1 = [...apiData].sort((a, b) => {
       return a.rating - b.rating
     })
     console.log(Data1, "SORTEDD")
@@ -106,7 +109,7 @@ const Home = () => {
   }
 
   function fun2() {
-    let Data1 = [...apiData].sort((a, b) => {
+      let Data1 = [...apiData].sort((a, b) => {
       return b.rating - a.rating
     })
     console.log(Data1, "SORTEDD")
@@ -114,23 +117,23 @@ const Home = () => {
   }
   
   function lunch(searchValue){
-    let filterData =apiData.filter((a)=>{
+      let filterData =apiData.filter((a)=>{
       return a.mealType[0]==searchValue
     })
     SetData(filterData)
   }
 
   function dinner(a){
-    let filterData =apiData.filter((a)=>{
+      let filterData =apiData.filter((a)=>{
       return a.mealType[0]== a
     })
     SetData(filterData)
   }
    
+ return (
 
-  return (
+      <div>
 
-    <div>
       <div>
         <button onClick={fun1}>Asc</button>
         <button onClick={fun2}>Des</button>
@@ -138,7 +141,9 @@ const Home = () => {
         <button onClick={()=>dinner("Dinner")}>Dinner</button>
         <button onClick={()=>lunch("Breakfast")}>Breakfast</button> 
       </div>
+
       {
+
         filterData.map((a, index) => {
           return (<>
             <div id='card'>
@@ -149,8 +154,12 @@ const Home = () => {
             </div>
           </>)
         })
+
       }
+
     </div>
+
   )
 }
 export default Home
+
