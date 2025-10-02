@@ -92,8 +92,7 @@ const Home = () => {
     })
   }, [])
 
-
-  function deletee(id) {
+   function deletee(id) {
       let newArr = apiData.filter((a, b) => {
       return b !== id
     })
