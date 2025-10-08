@@ -3,6 +3,9 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+import SignUp from './SignUp'
+import Login from './Login'
+
 // function App() {
 //   const [count, setCount] = useState(0)
 
@@ -142,35 +145,73 @@ export default App */
 
 // export default App
 
-import React, {useState} from 'react'
+// 08 october
+
+// import React, {useState} from 'react'
+
+// const App = () => {
+//   let[show,setShow] =  useState({})
+//   let [data,SetData]=   useState({
+//       name:"",
+//       email:"",
+//       password:""
+//     })
+
+  
+
+//      function fun1(e){
+//        let  {name,value}=e.target
+//        SetData({...data,[name]:value})
+//        console.log(data);
+      
+//       // console.log(e.target);
+//     }
+
+//     function done(){
+//       setShow({...data})
+//       console.log(show);
+//     }
+
+//   return (
+//     <div>
+//       {/* <h2>{input}</h2> */}
+      
+//       <input   type='text'  name='name' value ={data.name} onChange={fun1}  placeholder='Name'/>
+//       <br></br>
+//       <br></br>
+      
+//       <input  type='email' name='email' placeholder='email' onChange={fun1}  value={data.email}/>
+//       <br></br>
+//       <br></br>
+
+//       <input  type='password' name='password' value={data.password}  onChange={fun1}  placeholder='password'/>
+//       <br></br>
+//       <br></br>
+
+//       <button onClick={done}>click</button>
+//       <br></br>
+//       <br />
+
+//       {show.name}
+//       <h2>{show.email}</h2>
+//       <p>{show.password}</p>
+      
+
+
+//     </div>
+//   )
+// }
+// export default App
+
+import React from 'react'
 
 const App = () => {
-  let [input,SetInput]=   useState({
-      name:"",
-      email:"",
-      passWord:""
-    })
-
-     function fun1(e){
-      let  {name,value}=    e.target
-      SetInput({...input,[name]:value})
-      console.log(input);
-      
-      // console.log(e.target);
-    }
-
   return (
     <div>
-      {/* <h2>{input}</h2> */}
-      <input   name='name' value ={input.name} onChange={fun1} type='text' placeholder='Name'/>
-      <br></br>
-      <br></br>
-      <input  name='passWord' value={input.passWord}  onChange={fun1} type='text' placeholder='passWord'/>
-      <br></br>
-      <input  type='email' name="email" onChange={fun1}  value={input.email}/>
-
+    <SignUp/>
+    <Login/>
     </div>
   )
 }
-export default App
 
+export default App
