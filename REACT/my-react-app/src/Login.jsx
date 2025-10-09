@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   let[show,setShow] =  useState({})
   let [data,SetData]=   useState({
-      name:"",
+    //   name:"",
       email:"",
       password:""
     })
@@ -43,6 +44,10 @@ const Login = () => {
       <button onClick={done}>click</button>
       </fieldset>
 
+      <Link  to={'/SignUp'} >  
+      <button>go to the SignUp page</button>
+      </Link>
+
       <br></br>
       <br />
       
@@ -50,7 +55,7 @@ const Login = () => {
       <h2>{show.email}</h2>
       <p>{show.password}</p>
       
-
+       
 
     </div>
   )

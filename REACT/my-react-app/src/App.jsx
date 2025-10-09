@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-
+import Home from './Home'
 import SignUp from './SignUp'
 import Login from './Login'
 
@@ -204,12 +204,20 @@ export default App */
 // export default App
 
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
   return (
     <div>
-    <SignUp/>
-    <Login/>
+    {/* <SignUp/>
+    <Login/> */}
+
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route   path='/SignUp'    element={<SignUp/>}/>
+      <Route   path='/Login'    element={<Login/>}/>
+    </Routes>
+     
     </div>
   )
 }
