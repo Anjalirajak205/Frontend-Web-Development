@@ -203,23 +203,24 @@ export default App */
 // }
 // export default App
 
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+// import React from 'react'
+// import { Route, Routes } from 'react-router-dom'
 
-const App = () => {
-  return (
-    <div>
-    {/* <SignUp/>
-    <Login/> */}
+// const App = () => {
+//   return (
+//     <div>
+//     {/* <SignUp/>
+//     <Login/> */}
 
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route   path='/SignUp'    element={<SignUp/>}/>
-      <Route   path='/Login'    element={<Login/>}/>
-    </Routes>
+//     <Routes>
+//       <Route path='/' element={<Home/>}/>
+//       <Route   path='/SignUp'    element={<SignUp/>}/>
+//       <Route   path='/Login'    element={<Login/>}/>
+//     </Routes>
      
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
+

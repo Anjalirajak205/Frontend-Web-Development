@@ -9,9 +9,7 @@ const SignUp = () => {
       password:""
     })
 
-  
-
-     function fun1(e){
+       function fun1(e){
        let  {name,value}=e.target
        SetData({...data,[name]:value})
        console.log(data);
