@@ -203,24 +203,33 @@ export default App */
 // }
 // export default App
 
-// import React from 'react'
-// import { Route, Routes } from 'react-router-dom'
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import AddToCart from './AddToCart'
 
-// const App = () => {
-//   return (
-//     <div>
-//     {/* <SignUp/>
-//     <Login/> */}
+const App = () => {
+   let [apiData,SetData]=     useState([])
+   let [filteredddData,SetFilteredddData]=     useState([])
 
-//     <Routes>
-//       <Route path='/' element={<Home/>}/>
-//       <Route   path='/SignUp'    element={<SignUp/>}/>
-//       <Route   path='/Login'    element={<Login/>}/>
-//     </Routes>
+   let [cart,SetCart]=    useState([])
+   console.log(cart,"h=dekhooooo");
+
+  return (
+    <div>
+    {/* <SignUp/>
+    <Login/> */}
+
+    <Routes>
+      {/* <Route path='/' element={<Home/>}/> */}
+       <Route   path='/'  element={<Home cart={cart} SetCart={SetCart}   apiData={apiData} SetData={SetData} filteredddData={filteredddData}    SetFilteredddData={SetFilteredddData}  />} />
+      <Route   path='/SignUp'    element={<SignUp/>}/>
+      <Route   path='/Login'    element={<Login/>}/>
+      <Route   path='/cart'  element={<AddToCart cart={cart}/>} />
+    </Routes>
      
-//     </div>
-//   )
-// }
+    </div>
+  )
+}
 
-// export default App
+export default App
 

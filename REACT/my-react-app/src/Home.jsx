@@ -75,11 +75,15 @@ export default Home*/
 
 import React, { useEffect, useState } from 'react'
 import './App.css'
-
-const Home = () => {
+import { Link } from 'react-router-dom'
+const Home = ({cart,SetCart,  apiData,SetData,filteredddData,SetFilteredddData}) => {
+  let arr=[1,2,3,4,5]
+      let arr1=[6,7,8,...arr]
+      console.log(arr1,"rrrr");
+      console.log("heheheheh");
   
-      let[apiData, SetData] = useState([])
-      let[filterData,setFilterData]=useState([])
+      // let[apiData, SetData] = useState([])
+      // let[filterData,setFilterData]=useState([])
 
   useEffect(() => {
     fetch("https://dummyjson.com/recipes").then((res) => {
@@ -131,7 +135,13 @@ const Home = () => {
    
  return (
 
+      <> 
+      <Link  to={'/cart'}>  
+       <button>add to Cart {cart.length}</button>
+       </Link>
+
       <div>
+       
 
       <div>
         <button onClick={fun1}>Asc</button>
@@ -149,7 +159,10 @@ const Home = () => {
               <img src={a.image} />
               <p>{a.name}</p>
               <p>Rating: {a.rating}</p>
-              <button onClick={() => deletee(index)}>delete</button>
+              {/* <button onClick={() => deletee(index)}>delete</button> */}
+              
+              <button  onClick={()=> SetCart([...cart,a])}>add </button>
+           
             </div>
           </>)
         })
@@ -157,7 +170,7 @@ const Home = () => {
       }
 
     </div>
-
+    </>
   )
 }
 export default Home
