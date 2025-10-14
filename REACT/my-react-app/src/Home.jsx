@@ -77,6 +77,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import { Link } from 'react-router-dom'
 const Home = ({cart,SetCart,  apiData,SetData,filteredddData,SetFilteredddData}) => {
+
   let arr=[1,2,3,4,5]
       let arr1=[6,7,8,...arr]
       console.log(arr1,"rrrr");
@@ -92,7 +93,7 @@ const Home = ({cart,SetCart,  apiData,SetData,filteredddData,SetFilteredddData})
     }).then((data) => {
       console.log(data.recipes);
       SetData(data.recipes)
-      setFilterData(data.recipes)
+      SetFilteredddData(data.recipes)
     })
   }, [])
 
@@ -161,8 +162,7 @@ const Home = ({cart,SetCart,  apiData,SetData,filteredddData,SetFilteredddData})
               <p>Rating: {a.rating}</p>
               {/* <button onClick={() => deletee(index)}>delete</button> */}
               
-              <button  onClick={()=> SetCart([...cart,a])}>add </button>
-           
+             
             </div>
           </>)
         })

@@ -203,13 +203,14 @@ export default App */
 // }
 // export default App
 
-import React from 'react'
+import React ,{useState}from 'react'
+// import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import AddToCart from './AddToCart'
 
 const App = () => {
    let [apiData,SetData]=     useState([])
-   let [filteredddData,SetFilteredddData]=     useState([])
+    let [filteredddData,SetFilteredddData]=     useState([])
+
 
    let [cart,SetCart]=    useState([])
    console.log(cart,"h=dekhooooo");
@@ -224,7 +225,7 @@ const App = () => {
        <Route   path='/'  element={<Home cart={cart} SetCart={SetCart}   apiData={apiData} SetData={SetData} filteredddData={filteredddData}    SetFilteredddData={SetFilteredddData}  />} />
       <Route   path='/SignUp'    element={<SignUp/>}/>
       <Route   path='/Login'    element={<Login/>}/>
-      <Route   path='/cart'  element={<AddToCart cart={cart}/>} />
+      
     </Routes>
      
     </div>
