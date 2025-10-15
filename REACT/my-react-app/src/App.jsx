@@ -192,7 +192,7 @@ export default App */
 //       <br></br>
 //       <br />
 
-//       {show.name}
+//       {show.name} 
 //       <h2>{show.email}</h2>
 //       <p>{show.password}</p>
       

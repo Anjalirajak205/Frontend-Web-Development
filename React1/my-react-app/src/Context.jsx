@@ -11,7 +11,7 @@ const ContextP=({children})=>{
         cart:[]
     }
 
-    function reducer(apiData,action){
+    function reducer(state,action){
         if(action.type=="FETCH_DATA"){
             return{
                apiData:action.payload
@@ -29,10 +29,12 @@ const ContextP=({children})=>{
 
     },[])
 
-    let[val,dispatch]= useReducer(reducer,data)
+    let[state,dispatch]= useReducer(reducer,data)
     return(<div>
-       <Context.Provider>
+       <Context.Provider value={{state,dispatch}}>
         {children}
         </Context.Provider> 
     </div>)
 }
+
+export {ContextP}

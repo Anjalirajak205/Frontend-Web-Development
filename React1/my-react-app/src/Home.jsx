@@ -117,14 +117,41 @@
 
 // export default Home
 
-import React from 'react'
-import HomeChild from './HomeChild'
+// import React from 'react'
+// import HomeChild from './HomeChild'
+
+// const Home = () => {
+//   return (
+//     <div>
+//       <HomeChild/>
+//     </div>
+//   )
+// }
+
+// export default Home
+
+import React, { useContext } from 'react'
+import Context from './Context'
+import './App.css'
 
 const Home = () => {
-  return (
-    <div>
-      <HomeChild/>
-    </div>
+     let {dispatch,state}=   useContext(Context)
+     console.log(dispatch ,state,"hehehe");
+     return (
+   <>
+   {
+        state.apiData.map((a,index)=>{
+           return(<>
+           <div id='card'>
+          <img  src={a.image}/>
+             <p>{a.name}</p>
+            <p> Rating: {a.rating}</p>          <button  onClick={()=> SetCart([...cart,a])}>add </button>
+           
+          </div>
+          </>)
+         })
+      } 
+   </>
   )
 }
 

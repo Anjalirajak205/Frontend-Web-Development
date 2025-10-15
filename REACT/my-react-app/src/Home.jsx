@@ -71,7 +71,7 @@ return (*/
 }
 export default Home*/
 
-// 25 september
+
 
 import React, { useEffect, useState } from 'react'
 import './App.css'
@@ -175,7 +175,6 @@ const Home = ({cart,SetCart,  apiData,SetData,filteredddData,SetFilteredddData})
 }
 export default Home
 
-// 28 september
 
 // import React, { useEffect, useState } from 'react'
 // import './App.css'

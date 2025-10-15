@@ -4,14 +4,19 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import {BrowserRouter}  from 'react-router-dom'
 import Context from './Context.jsx'
+import { ContextP } from './Context.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <BrowserRouter> */}
-    <Context.Provider value={"hello"}>
-    <App />
+    {/* <Context.Provider value={"hello"}> */}
+    <ContextP>  
+    <App    />
+    </ContextP>
     {/* </BrowserRouter> */}
-    </Context.Provider>
+    {/* </Context.Provider> */}
+   
+
   </StrictMode>,
 )
 
