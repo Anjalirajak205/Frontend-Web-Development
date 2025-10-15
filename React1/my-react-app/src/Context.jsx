@@ -17,6 +17,11 @@ const ContextP=({children})=>{
                apiData:action.payload
             }
         }
+         else if(action.type=="cart"){
+            return {
+                ...state,cart:[action.payload]
+            }
+        }
     }
 
     useEffect(()=>{

@@ -8,12 +8,12 @@ import { ContextP } from './Context.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
     {/* <Context.Provider value={"hello"}> */}
     <ContextP>  
     <App    />
     </ContextP>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
     {/* </Context.Provider> */}
    
 

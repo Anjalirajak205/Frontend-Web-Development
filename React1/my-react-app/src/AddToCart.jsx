@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import Context from './Context'
 
-const AddToCart = ({cart}) => {
+const AddToCart = () => {
+  let {state ,dispatch} =    useContext(Context)
+  console.log(state.cart,"hehehe");
+  
   return (
-    <div>
+    <div>  
         {
-            cart.map((a)=>{
+            state.cart.map((a)=>{
                 return (<>
                 <div id='card'> 
-                    <img  src={a.image}/>
+                   
             <p>{a.name}</p>
             <p> Rating: {a.rating}</p>
          <button  onClick={()=> SetCart([...cart,a])}>add </button>
@@ -16,7 +20,7 @@ const AddToCart = ({cart}) => {
 
             })
         }
-    </div>
+        </div>
   )
 }
 
