@@ -14,8 +14,8 @@ const AddToCart = () => {
                    
             <p>{a.name}</p>
             <p> Rating: {a.rating}</p>
-         <button  onClick={()=> SetCart([...cart,a])}>add </button>
-         </div>
+            <button  onClick={()=> SetCart([...cart,a])}>add </button>
+    </div>
                 </>)
 
             })

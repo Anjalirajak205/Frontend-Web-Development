@@ -89,14 +89,12 @@ import AddToCart from './AddToCart'
 const App = () => {
   return (
     <div>
-             <Routes>
+        <Routes>
+
         <Route   path='/'  element={<Home   />} />     
-  
-      
-         <Route   path='/cart'  element={<AddToCart/>} />
-
-
-//       </Routes>
+        <Route   path='/cart'  element={<AddToCart/>} />
+        
+        </Routes>
     </div>
   )
 }
