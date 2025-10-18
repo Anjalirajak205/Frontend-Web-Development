@@ -23,5 +23,4 @@ const AddToCart = () => {
         </div>
   )
 }
-
 export default AddToCart
