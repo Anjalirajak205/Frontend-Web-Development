@@ -209,10 +209,10 @@ import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
    let [apiData,SetData]=     useState([])
-    let [filteredddData,SetFilteredddData]=     useState([])
+    let [filteredddData,SetFilteredddData]=useState([])
 
 
-   let [cart,SetCart]=    useState([])
+   let [cart,SetCart]=useState([])
    console.log(cart,"h=dekhooooo");
 
   return (
