@@ -82,23 +82,62 @@
 
 // export default App
 
-import React from 'react'
-import Home from './Home'
-import { Route,Routes } from 'react-router-dom'
-import AddToCart from './AddToCart'
+// import React from 'react'
+// import Home from './Home'
+// import { Route,Routes } from 'react-router-dom'
+// import AddToCart from './AddToCart'
 
-const App = () => {
+// const App = () => {
   
-  return (
-    <div>
-        <Routes>
+//   return (
+//     <div>
+//         <Routes>
 
-        <Route   path='/'  element={<Home   />} />     
-        <Route   path='/cart'  element={<AddToCart/>} />
+//         <Route   path='/'  element={<Home   />} />     
+//         <Route   path='/cart'  element={<AddToCart/>} />
         
-        </Routes>
-    </div>
-  )
+//         </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React,{useState}from 'react'
+
+const App = () =>{
+    let [input,SetInput]=useState("")
+    let[data,SetData]=useState([])
+    function fun1(e){
+        SetInput(e.target.value)
+    }
+    function done(){
+      SetData([...data,input])
+    }
+
+    function d(id){
+      let filterData=data.filter((a,b)=>{
+        return b!=id
+      }) 
+      SetData(filterData)
+    }
+
+    return(
+        <div>
+           {/* <h2>{input}</h2>  */}
+           <input onChange={fun1}/>
+           <button onClick={done}>click</button>
+           {/* <button onClick={done}>delete</button> */}
+           {
+            data.map((a,index)=>{
+              return(<>
+              <h2>{a}</h2>
+              <button onClick={()=>d(index)}>delete</button>
+              </>)
+            })
+           }
+      </div>
+    )
 }
 
 export default App
