@@ -104,62 +104,42 @@
 
 // export default App
 
-// import React,{useState}from 'react'
+import React,{useState}from 'react'
 
-// const App = () =>{
-//     let [input,SetInput]=useState("")
-//     let[data,SetData]=useState([])
-//     function fun1(e){
-//         SetInput(e.target.value)
-//     }
-//     function done(){
-//       SetData([...data,input])
-//     }
+const App = () =>{
+    let [input,SetInput]=useState("")
+    let[data,SetData]=useState([])
+    function fun1(e){
+        SetInput(e.target.value)
+    }
+    function done(){
+      SetData([...data,input])
+    }
 
-//     function d(id){
-//       let filterData=data.filter((a,b)=>{
-//         return b!=id
-//       }) 
-//       SetData(filterData)
-//     }
+    function d(id){
+      let filterData=data.filter((a,b)=>{
+        return b!=id
+      }) 
+      SetData(filterData)
+    }
 
-//     return(
-//         <div>
-//            {/* <h2>{input}</h2>  */}
-//            <input onChange={fun1}/>
-//            <button onClick={done}>click</button>
-//            {/* <button onClick={done}>delete</button> */}
-//            {
-//             data.map((a,index)=>{
-//               return(<>
-//               <h2>{a}</h2>
-//               <button onClick={()=>d(index)}>delete</button>
-//               </>)
-//             })
-//            }
-//       </div>
-//     )
-// }
-
-// export default App
-
-import React from "react"
-import { useState } from "react"
-
-const App =()=>{
-
-  let[state,setstate]=useState(0)
-  
-
-  function fun1(){
-
-  }
-  return(
-    <div>
-      <button>Start</button>
-      <button>Stop</button>
-    </div>
-  )
+    return(
+        <div>
+           {/* <h2>{input}</h2>  */}
+           <input onChange={fun1}/>
+           <button onClick={done}>click</button>
+           {/* <button onClick={done}>delete</button> */}
+           {
+            data.map((a,index)=>{
+              return(<>
+              <h2>{a}</h2>
+              <button onClick={()=>d(index)}>delete</button>
+              </>)
+            })
+           }
+      </div>
+    )
 }
 
 export default App
+
