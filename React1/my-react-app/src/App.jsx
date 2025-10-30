@@ -124,6 +124,7 @@ const App = () =>{
     }
 
     return(
+      
         <div>
            {/* <h2>{input}</h2>  */}
            <input onChange={fun1}/>
