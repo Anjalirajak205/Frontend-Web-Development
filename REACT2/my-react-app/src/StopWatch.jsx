@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function Stopwatch() {
+  
   const [time, setTime] = useState(0); // time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
